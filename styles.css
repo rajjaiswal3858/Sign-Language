@@ -1,0 +1,128 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* background: linear-gradient(135deg, #f3f4f6, #e5e5e5); */
+    background-color: #F8EDE3;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #333;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.alphabet-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.letter-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 120px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    padding: 15px;
+    position: relative;
+    border: 2px solid #ddd;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Initially moved down */
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.letter-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.letter-card p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.letter-card p:last-of-type {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Hover effects and animation */
+.letter-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.letter-card:hover img {
+    transform: scale(1.1);
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 1.5em;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth transition animation for the cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .letter-card {
+        width: 100px; /* Slightly smaller width for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .alphabet-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .letter-card {
+        width: 80%;
+        max-width: 150px; /* Maximum width for very small screens */
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    footer p {
+        font-size: 1.2em;
+    }
+}
+.letter-card{
+    
+}
